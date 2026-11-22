@@ -14,11 +14,25 @@ def rosenbrock_gradient(params):
 
 
 class GradientDescent:
-    def __init__(self, lr=0.001):
-        self.lr = lr
+    def __init__(self, lr=0.001, decay=1.0):
+        # lr_0:  初始学习率（initial learning rate）
+        # decay: 每步学习率衰减因子，decay=1.0 表示固定学习率（不衰减）
+        # t:     已完成的更新步数（step counter）
+        self.lr_0 = lr
+        self.decay = decay
+        self.t = 0
+
+    @property
+    def lr(self):
+        # 指数衰减：当前学习率 lr = lr_0 * decay^t
+        # 例如 decay=0.999 时，第 5000 步的学习率约为 lr_0 * 0.0067
+        return self.lr_0 * self.decay ** self.t
 
     def step(self, params, grads):
-        return [p - self.lr * g for p, g in zip(params, grads)]
+        # 先用当前步的学习率更新参数，步数 t 再自增 1
+        lr = self.lr_0 * self.decay ** self.t
+        self.t += 1
+        return [p - lr * g for p, g in zip(params, grads)]
 
 
 class SGDMomentum:
@@ -280,8 +294,59 @@ def demo_saddle_point():
         print(f"  {name:<22s}  {final[0]:10.6f}  {final[1]:10.6f}  {val:12.6f}  {'yes' if escaped else 'no'}")
 
 
+def demo_lr_decay():
+    # Exercise 4: 学习率衰减
+    # 为 GradientDescent 增加指数衰减学习率 lr = lr_0 * 0.999^step，
+    # 并在 Rosenbrock 函数上对比“带衰减”与“不带衰减”的收敛情况。
+    print(f"\n\n{'=' * 60}")
+    print("  EX 4: LEARNING RATE DECAY (lr = lr_0 * 0.999^step)")
+    print(f"{'=' * 60}")
+
+    start = [-1.0, 1.0]
+    steps = 5000
+    decay = 0.999          # 衰减因子：每一步的学习率乘以 0.999
+
+    # 两组不同的初始学习率形成对照：
+    # 0.0005 本身已经小而安全（固定学习率就够用）；
+    # 0.004 太大，固定学习率会在谷内振荡、无法收敛
+    for lr_0 in [0.0005, 0.004]:
+        print(f"\n  ---- lr_0 = {lr_0} "
+              f"(decays to {lr_0 * decay ** steps:.3e} by step {steps}) ----")
+        # 两种配置：固定学习率 vs 指数衰减学习率（相同 lr_0，保证对比公平）
+        configs = [
+            ("GD (fixed lr)",    GradientDescent(lr=lr_0)),
+            ("GD + decay 0.999", GradientDescent(lr=lr_0, decay=decay)),
+        ]
+
+        milestones = [0, 500, 1000, 2000, 3000, 4000, 5000]  # 观察损失的里程碑步数
+        for name, opt in configs:
+            # 运行优化并记录每一步的参数轨迹
+            history = optimize(opt, rosenbrock, rosenbrock_gradient, start, steps)
+            print(f"\n  {name}:")
+            print(f"  {'Step':>6s}  {'Loss':>14s}  {'x':>10s}  {'y':>10s}")
+            for i in milestones:
+                if i >= len(history):
+                    break  # 若中途发散或提前终止，则只打印已有轨迹
+                p = history[i]
+                print(f"  {i:6d}  {rosenbrock(p):14.8f}  {p[0]:10.6f}  {p[1]:10.6f}")
+            # 最终损失与收敛步数：衰减使后期步长逐渐变小，收敛通常更稳
+            final = history[-1]
+            loss = rosenbrock(final)
+            conv = find_convergence_step(history, rosenbrock)
+            conv_msg = f"step {conv}" if conv < len(history) else "no"
+            print(f"  final loss = {loss:.8f}, converged (<1e-4) at: {conv_msg}")
+
+    # 结论：学习率衰减小步“快进慢收”——
+    # lr_0 较小时，衰减只会拖慢总进度；lr_0 处于稳定边缘时，
+    # 固定学习率会振荡卡死，而衰减能先快速前进、再稳稳落入最优点
+    print("\n  takeaway:")
+    print("  - lr_0 = 0.0005: fixed lr is already safe, decay slows total progress")
+    print("  - lr_0 = 0.004:  fixed lr oscillates and stalls, decay settles into the minimum")
+
+
 if __name__ == "__main__":
     demo_comparison()
     demo_learning_rate_effect()
     demo_momentum_effect()
     demo_saddle_point()
+    demo_lr_decay()
