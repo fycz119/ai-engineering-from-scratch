@@ -1,0 +1,7 @@
+.markdown-rendered pre {
+  border-left: solid var(--color-accent);
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
+  border-left: solid var(--color-accent);
+}

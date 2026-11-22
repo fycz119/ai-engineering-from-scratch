@@ -1,0 +1,22 @@
+/*
+author: sailKite
+source: https://discord.com/channels/686053708261228577/702656734631821413/1172421139931340810
+note: original snippet is modified for obsidian v1.12.7
+*/
+
+[data-type="outline"] .workspace-leaf-content-hrx {
+  counter-reset: outline-c;
+}
+
+[data-type="outline"] .tree-item {
+  counter-increment: outline-c;
+}
+
+[data-type="outline"] .tree-item-children {
+  counter-reset: outline-c;
+}
+
+[data-type="outline"] .tree-item-self .tree-item-inner::before {
+  content: counters(outline-c, ".") ". ";
+  font-variant-numeric: tabular-nums;
+}

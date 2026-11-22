@@ -1,0 +1,24 @@
+.callout[data-callout="author"] {
+  display: flex;
+  flex-direction: column;
+  --callout-icon: user;
+  --callout-color: var(--background-secondary-alt);
+  box-shadow: var(--shadow-s);
+  border-left: 4px solid var(--interactive-accent);
+  border-radius: var(--radius-s);
+  padding: var(--size-4-3) var(--size-4-4);
+}
+
+.callout[data-callout="author"] .callout-content {
+  order: 1;
+}
+
+.callout[data-callout="author"]>.callout-title {
+  order: 2;
+  display: flex;
+  justify-content: flex-end;
+  font-style: italic;
+  font-size: var(--font-small);
+  color: var(--text-muted);
+  padding: 0;
+}

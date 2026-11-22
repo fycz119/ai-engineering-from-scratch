@@ -1,0 +1,240 @@
+{
+  "main": {
+    "id": "02d633a6e12c1586",
+    "type": "split",
+    "children": [
+      {
+        "id": "04538ed6d0eb28e5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f55f2378693f022e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "phases/01-math-foundations/16-sampling-methods/docs/zh.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "zh"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "5f0cc36e5f3c9ee1",
+    "type": "split",
+    "children": [
+      {
+        "id": "0a44d0bef2656029",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8bca2e2f4fbf999e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "1df06f0257cb4892",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "90511f27c3dbf2b9",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "3a4ef3068026362b",
+    "type": "split",
+    "children": [
+      {
+        "id": "e42bd38865b18882",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "24a6b1a8ed57c760",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "phases/01-math-foundations/16-sampling-methods/docs/zh.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "反向链接"
+            }
+          },
+          {
+            "id": "08c064f46e936b75",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "phases/01-math-foundations/15-statistics-for-ml/docs/zh.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "出链"
+            }
+          },
+          {
+            "id": "8c46a9e353692a3a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "48e95f05457135f7",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "bc6b0f82cfbf64d2",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "phases/01-math-foundations/16-sampling-methods/docs/zh.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "大纲"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false
+    }
+  },
+  "active": "8bca2e2f4fbf999e",
+  "lastOpenFiles": [
+    "skills/motion-figure/templates/mechanism.html",
+    "skills/motion-figure/templates/dither.js",
+    "skills/motion-figure/references/toolkit.md",
+    "skills/motion-figure/references/tokens.md",
+    "skills/motion-figure/references/smil-rules.md",
+    "skills/motion-figure/references/mechanism-figures.md",
+    "skills/motion-figure/references/dither-fields.md",
+    "skills/motion-figure/templates",
+    "skills/motion-figure/SKILL.md",
+    "skills/motion-figure/references",
+    "skills/motion-figure",
+    "skills/mcpa-certification/agents/openai.yaml",
+    "skills/mcpa-certification/SKILL.md",
+    "skills/mcpa-certification/agents",
+    "skills/mcpa-certification",
+    "skills/isometric-explainer/templates/model.test.mjs",
+    "skills/isometric-explainer/templates/model.mjs",
+    "skills/isometric-explainer/templates/live.js",
+    "skills/isometric-explainer/references/concept.md",
+    "skills/isometric-explainer/references/verify.md",
+    "skills/isometric-explainer/references/state-model.md",
+    "skills/isometric-explainer/references/live.md",
+    "skills/isometric-explainer/references/geometry.md",
+    "skills/isometric-explainer/references/colour-and-ink.md",
+    "skills/isometric-explainer/SKILL.md",
+    "scripts/interviews/prompt.md",
+    "skills/write-manual/references/section-template.md",
+    "skills/write-manual/references/research-and-sources.md",
+    "skills/write-manual/references/prose-rules.md",
+    "skills/write-manual/references/manual-json.md",
+    "skills/write-manual/references/capture-kit.md",
+    "skills/write-manual/references/audit.md",
+    "skills/write-manual/SKILL.md",
+    "skills/lesson-screen/references/screens.md",
+    "skills/lesson-screen/references/hosts.md",
+    "skills/lesson-screen/references/build.md",
+    "site/favicon.svg",
+    "site/apple-touch-icon.png",
+    "site/anatomy/inside-an-llm-serving-gpu-og.png",
+    "site/anatomy/inside-an-llm-serving-gpu-poster.png",
+    "site/anatomy/inside-an-ai-agent-poster.png",
+    "site/anatomy/inside-an-llm-serving-gpu-machine.png",
+    "site/anatomy/inside-an-llm-serving-gpu-machine-dark.png",
+    "site/anatomy/inside-an-ai-agent-og.png",
+    "site/anatomy/inside-an-ai-agent-machine.png",
+    "site/anatomy/inside-a-decompiler-poster.png"
+  ]
+}

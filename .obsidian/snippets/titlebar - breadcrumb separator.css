@@ -1,0 +1,17 @@
+/*
+author: sailKite
+source: https://discord.com/channels/686053708261228577/702656734631821413/1088453662352887828
+*/
+
+body {
+  --file-header-justify: left:
+}
+
+.view-header-breadcrumb-separator {
+  font-size: 0px;
+}
+
+.view-header-breadcrumb-separator::after {
+  content: "»";
+  font-size: var(--file-header-font-size);
+}

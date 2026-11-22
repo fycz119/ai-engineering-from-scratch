@@ -1,0 +1,19 @@
+.HyperMD-list-line-1,
+ul [data-line="0"] {
+  color: deeppink;
+}
+
+.HyperMD-list-line-2,
+ul [data-line="1"] {
+  color: dodgerblue;
+}
+
+.HyperMD-list-line-3,
+ul [data-line="2"] {
+  color: green;
+}
+
+.HyperMD-list-line-4,
+ul [data-line="3"] {
+  color: var(--text-normal);
+}
